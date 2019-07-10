@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" xmlns: th="www.thymeleaf.org">
+<head>
+    <a href="#" class="fa fa-twitter"></a>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the body */
+        body {
+
+        }
+
+        /* Header/logo Title */
+        .header {
+
+            width: 100%;
+            height: 150px;
+            text-align: center;
+            background-image: url("https://www.mdvip.com/sites/default/files/inline-images/obesity-survey-scale.jpg");
+        }
+
+        {
+
+            color: white
+        ;
+        }
+
+        /* Increase the font size of the heading */
+        .header h1 {
+            font-size: 50px;
+            font-family: 'Hammersmith One', sans-serif;
+            margin: 0;
+        }
+        .header h3{
+            font-size: 50px;
+            font-family: 'Hammersmith One', sans-serif;
+            margin: 0;
+        }
+        /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+        .navbar {
+            overflow: hidden;
+            background-color: navajowhite;
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        /* Right-aligned link */
+        .navbar a.right {
+            float: right;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: red;
+        }
+
+        /* Active/current link */
+        .navbar a.active {
+            background-color: #666;
+            color: white;
+        }
+
+        /* Column container */
+        .row {
+            display: -ms-flexbox; /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap; /* IE10 */
+            flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+            -ms-flex: 70%; /* IE10 */
+            flex: 70%;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: 450px;
+            width: 1000px;
+        }
+
+        /* Main column */
+        .main {
+            -ms-flex: 100%; /* IE10 */
+            flex: 100%;
+            background-color: white;
+            padding: 20px;
+        }
+
+        /* Fake image, just for this example */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+
+        }
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+            .row {
+                flex-direction: column;
+            }
+        }
+
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+        @media screen and (max-width: 400px) {
+            .navbar a {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<div class="row">
+
+    <div class="main">
+
+
+        <div class="header">
+            <h1 style="font-family: verdana;">How to Lose Weight</h1>
+
+        </div>
+
+        <div class="navbar">
+
+            <ul>
+
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                    <div class="dropdown-content">
+                        <a href="/legs.html">Legs</a>
+                        <a href="/abs.html">Abs </a>
+                        <a href="/back.html">Back </a>
+                        <a href="/chest.html">Chest </a>
+                    </div>
+                </li>
+            </ul>
+
+            <a href="javascript:void(0)" class="dropbtn">Home</a>
+
+            <div class="dropdown-content">
+
+            </div>
+
+
+            <h2><b>Simple Steps On How to Lose Weight</b></h2>
+
+
+            <img src="https://cdn2.iconfinder.com/data/icons/health-colored/160/39-512.png"/>
+
+            <h3>Here are 12 Steps:</h3>
+            <ol>
+
+                <li><b> Don't skip breakfast</b></li>
+                <br/>
+                <p>Skipping breakfast won't help you lose weight. You could miss out on essential nutrients and you may
+                    end up snacking more throughout the day because you feel hungry.
+                    Check out five healthy breakfasts.</p>
+
+
+
+                <li>Eat regular meals</li>
+                <br/>
+                <p>Eating at regular times during the day helps burn calories at a faster rate. It also reduces the
+                    temptation to snack on foods high in fat and sugar.
+                    Find out more about eating heathily.</p>
+
+
+                <li><b>Eat plenty of fruit and veg</b></li>
+                <br/>
+                <p>Fruit and veg are low in calories and fat, and high in fibre – 3 essential ingredients for successful
+                    weight loss.
+                    They also contain plenty of vitamins and minerals. Read up on getting your 5 A Day.</p>
+
+
+                <li><b>Get more active</b></li>
+                <br/>
+                <p>Being active is key to losing weight and keeping it off. As well as providing numerous health
+                    benefits, exercise can help burn off the excess calories you can't cut through diet alone.
+                    Find an activity you enjoy and are able to fit into your routine.</p>
+
+
+                <li><b>Drink plenty of water</b></li>
+                <br/>
+                <p>People sometimes confuse thirst with hunger.
+                    You can end up consuming extra calories when a glass of water is really what you need.</p>
+
+
+                <li><b>Eat high-fibre foods</b></li>
+                <br/>
+                <p>Foods containing lots of fibre can help keep you to feel full, which is perfect for losing weight.
+                    Fibre is only found in food from plants, such as fruit and veg, oats, wholegrain bread, brown rice
+                    and pasta, and beans, peas and lentils.</p>
+
+
+                <li><b>Read food labels</b></li>
+                <br/>
+                <p>Knowing how to read food labels can help you choose healthier options.
+                    Use the calorie information to work out how a particular food fits into your daily calorie allowance
+                    on the weight loss plan. Find out more about reading food labels.
+                </p>
+
+
+                <li><b>Use a smaller plate</b></li>
+                <br/>
+                <p>Using smaller plates can help you eat smaller portions. By using smaller plates and bowls, you may be
+                    able to gradually get used to eating smaller portions without going hungry.
+                    It takes about 20 minutes for the stomach to tell the brain it's full, so eat slowly and stop eating
+                    before you feel full.</p>
+
+
+                <li><b>Don't ban foods</b></li>
+                <br/>
+                <p>Don't ban any foods from your weight loss plan, especially the ones you like. Banning foods will only
+                    make you crave them more.
+                    There's no reason you can't enjoy the occasional treat as long as you stay within your daily calorie
+                    allowance.</p>
+
+
+                <li><b>Don't stock junk food</b></li>
+                <br/>
+                <p>To avoid temptation, try to not stock junk food – such as chocolate, biscuits, crisps and sweet fizzy
+                    drinks – at home.
+                    Instead, opt for healthy snacks, such as fruit, unsalted rice cakes, oat cakes, unsalted or
+                    unsweetened popcorn, and fruit juice.</p>
+
+
+                <li><b>Cut down on alcohol</b></li>
+                <br/>
+                <p>A standard glass of wine can contain as many calories as a piece of chocolate. Over time, drinking
+                    too much can easily contribute to weight gain.
+                    Find out more about the calories in alcohol.</p>
+
+
+                <li><b>Plan your meals</b></li>
+                <br/>
+                <p>Try to plan your breakfast, lunch, dinner and snacks for the week, making sure you stick to your
+                    calorie allowance.
+                    You may find it helpful to make a weekly shopping list.</p>
+                <br/>
+            </ol>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <h6>Website by Bk</h6>
+
+    </div>
+
+</body>
+</html>
